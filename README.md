@@ -1,13 +1,17 @@
 # AURUM CLOTHING — Storefront
 
-A responsive static clothing storefront for GitHub Pages.
+A responsive, editorial-style clothing storefront for GitHub Pages.
 
-- Dashboard landing page with editorial hero and featured collections.
-- Dedicated store view with search, category filters, sorting, and product detail dialogs.
-- No Analysis, Feedback, Portfolio, or slide-out menu pages.
+## Experience
+- Brand-led landing page and featured collections.
+- Product catalogue with category filters, search and sorting.
+- Dedicated, full-screen product detail pages (not quick-view modals).
+- Shareable product URLs using #product/product-id and browser back/forward navigation.
+- Product details include imagery, price, description, colour, fit, size labels and related pieces.
+- Responsive desktop and mobile layouts with reduced-motion support.
 
-## Deployment
-GitHub Pages publishes from the `main` branch root (`/`).
+## Catalogue and availability
+The storefront currently contains 10 sample catalogue products and uses locally hosted product photography in assets/. Prices and product descriptions are demo catalogue data. All products are currently presented as out of stock. Live inventory, checkout, payments, customer accounts, shipping rules and returns processing are not connected.
 
-## Catalogue
-Products are shown as out of stock because the site is a static storefront demo and is not connected to live inventory or checkout. Product photography is loaded from Unsplash URLs.
+## Deploy
+GitHub Pages publishes the main branch root. Open the repository's Pages URL after the latest commit has finished publishing.

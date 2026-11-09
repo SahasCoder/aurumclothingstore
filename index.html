@@ -22,6 +22,54 @@
 @media(max-width:900px){.hero-copy{width:61%;max-width:61%}}
 @media(max-width:580px){.brand-logo{width:29px;height:29px}.brand{gap:8px}.brand-name{font-size:10px;letter-spacing:.16em}.hero{min-height:510px}.hero-photo{width:100%;height:72%;top:0;right:0;opacity:.95;object-position:center top}.hero-copy{width:100%;max-width:100%;padding:24px 20px;background:linear-gradient(transparent,rgba(24,25,22,.94) 27%)}.hero h1{font-size:clamp(3.2rem,14vw,4rem)}.feature-card img{padding:10px 8px}.feature-card:after{inset:40% 0 0}}
 @media(prefers-reduced-motion:reduce){.loader-track span{animation:none}.site-loader{transition:none}.feature-card img,.product-image img{transition:none}}
+
+/* AURUM full-page product experience */
+.product-page{background:var(--paper);min-height:calc(100vh - 110px)}
+.product-detail-top{padding:19px 5vw;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:18px;font-size:9px;letter-spacing:.17em;text-transform:uppercase;color:var(--muted)}
+.detail-back{border:0;background:transparent;padding:8px 0;color:var(--ink);font-size:9px;letter-spacing:.16em;text-transform:uppercase}
+.detail-back:hover{opacity:.58}
+.product-detail-layout{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(390px,.88fr);align-items:start;max-width:1600px;margin:0 auto}
+.detail-gallery{padding:34px 4vw 42px 5vw}
+.detail-image-stage{height:min(72vw,760px);min-height:480px;background:#e8e6df;display:grid;place-items:center;overflow:hidden}
+.detail-image-stage img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;transition:transform .7s ease}
+.detail-image-stage:hover img{transform:scale(1.035)}
+.detail-image-caption{display:flex;justify-content:space-between;gap:12px;padding-top:13px;color:var(--muted);font-size:8px;letter-spacing:.17em;text-transform:uppercase}
+.detail-content{padding:clamp(30px,5vw,78px) clamp(24px,5vw,76px) 70px 3vw;position:sticky;top:15px}
+.detail-overline{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--olive)}
+.detail-content h1{font-family:var(--serif);font-size:clamp(38px,5vw,67px);line-height:1.02;letter-spacing:-.045em;font-weight:400;margin:18px 0 13px}
+.detail-price{font-size:15px;letter-spacing:.04em;margin:0 0 24px}
+.detail-description{max-width:490px;color:#66675f;font-size:13px;line-height:1.9;margin:0 0 27px}
+.detail-meta-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0;margin-bottom:26px;gap:15px}
+.detail-meta-grid span{display:block;color:var(--muted);font-size:8px;letter-spacing:.17em;text-transform:uppercase;margin-bottom:8px}
+.detail-meta-grid strong{font-size:11px;font-weight:500}
+.detail-size-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.detail-size-head span:first-child{font-size:9px;letter-spacing:.17em;text-transform:uppercase}
+.detail-size-head span:last-child{font-size:9px;color:var(--muted)}
+.detail-sizes{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:22px}
+.detail-size{min-width:44px;height:42px;padding:0 12px;border:1px solid var(--line);background:transparent;color:var(--muted);font-size:10px;opacity:.55;cursor:not-allowed}
+.detail-stock{display:flex;align-items:center;gap:10px;background:#e8e6df;padding:14px 15px;margin:0 0 12px;font-size:10px;letter-spacing:.06em}
+.detail-stock-dot{width:6px;height:6px;border-radius:50%;background:#9b705b}
+.detail-unavailable{width:100%;min-height:53px;border:1px solid #a5a49c;background:#a5a49c;color:white;letter-spacing:.16em;text-transform:uppercase;font-size:9px;font-weight:700;cursor:not-allowed}
+.detail-note{font-size:9px;line-height:1.7;color:var(--muted);margin:11px 0 26px}
+.detail-accordion{border-top:1px solid var(--line)}
+.detail-accordion details{border-bottom:1px solid var(--line)}
+.detail-accordion summary{list-style:none;cursor:pointer;padding:17px 0;display:flex;justify-content:space-between;gap:12px;font-size:9px;letter-spacing:.15em;text-transform:uppercase}
+.detail-accordion summary::-webkit-details-marker{display:none}
+.detail-accordion summary:after{content:"+";font-size:15px;line-height:10px}
+.detail-accordion details[open] summary:after{content:"−"}
+.detail-accordion details p{font-size:11px;line-height:1.8;color:var(--muted);margin:0 0 18px;max-width:500px}
+.detail-related{padding:28px 0 0}
+.detail-related h2{font-family:var(--serif);font-size:25px;font-weight:400;margin:0 0 16px}
+.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.related-card{display:grid;grid-template-columns:74px 1fr;gap:11px;align-items:center;cursor:pointer}
+.related-card img{width:74px;height:88px;object-fit:contain;background:#e8e6df}
+.related-card strong{display:block;font-size:10px;font-weight:500;line-height:1.5}
+.related-card small{display:block;font-size:9px;color:var(--muted);margin-top:6px}
+.related-card:hover strong{text-decoration:underline;text-underline-offset:4px}
+@media(max-width:900px){.product-detail-layout{grid-template-columns:1fr 1fr}.detail-gallery{padding:24px 18px 30px 4vw}.detail-image-stage{height:65vw;min-height:420px}.detail-content{padding:35px 4vw 55px 18px}.detail-content h1{font-size:clamp(35px,5vw,52px)}}
+@media(max-width:640px){.product-page{min-height:0}.product-detail-top{padding:14px 18px;font-size:8px}.product-detail-top>span:last-child{display:none}.product-detail-layout{display:block}.detail-gallery{padding:12px 12px 0}.detail-image-stage{height:112vw;min-height:0;max-height:560px}.detail-image-caption{padding:10px 3px}.detail-content{position:static;padding:29px 20px 55px}.detail-content h1{font-size:43px;margin:13px 0}.detail-description{font-size:12px}.detail-meta-grid{padding:15px 0}.related-grid{gap:9px}.related-card{grid-template-columns:62px 1fr;gap:8px}.related-card img{width:62px;height:76px}.related-card strong{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.detail-image-stage img{transition:none}}
+
 </style>
 </head>
 <body>
@@ -37,15 +85,77 @@
 <section id="store" class="page"><div class="store-head"><div class="section-kicker">AURUM · Product catalogue</div><div class="store-title-row"><div><h1>The store.</h1><p>Considered staples for your everyday rotation.</p></div><button class="btn outline" id="back-home">← Back to home</button></div></div><div class="store-controls"><div class="filters" id="filters"><button class="filter active" data-category="All">All pieces</button><button class="filter" data-category="Hoodie">Hoodies</button><button class="filter" data-category="T-shirt">T-shirts</button><button class="filter" data-category="Jeans">Jeans</button><button class="filter" data-category="Trousers">Trousers</button><button class="filter" data-category="Women’s Tops">Women’s tops</button><button class="filter" data-category="Overshirt">Overshirts</button></div><div class="store-tools"><input class="search" id="search" type="search" placeholder="Search pieces…" aria-label="Search products"><select id="sort" aria-label="Sort products"><option value="featured">Featured</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="name">Name: A–Z</option></select></div></div><div class="result-count" id="result-count">10 pieces</div><div class="product-grid" id="product-grid"></div></section>
 </main>
 <footer class="footer"><strong>AURUM CLOTHING</strong><span>Considered essentials for everyday living</span><span>© <span id="year"></span> AURUM</span></footer>
-<div class="modal" id="product-modal" role="dialog" aria-modal="true" aria-labelledby="modal-name"><div class="modal-card"><button class="modal-close" id="modal-close" aria-label="Close product details">×</button><img id="modal-image" class="modal-image" src="" alt=""><div class="modal-copy"><div class="section-kicker" id="modal-tag"></div><h2 id="modal-name"></h2><div class="modal-price" id="modal-price"></div><p id="modal-description"></p><div class="size-label">Select size</div><div class="sizes" id="modal-sizes"></div><button class="btn" disabled id="modal-stock">Currently out of stock</button><p style="font-size:10px">This catalogue is a visual storefront demo. Product availability has not been connected to inventory.</p></div></div></div>
+
+<section id="product-page" class="page product-page" aria-label="Product details">
+  <div class="product-detail-top">
+    <button class="detail-back" id="product-back" type="button">← Back to the collection</button>
+    <span>AURUM / PRODUCT / <span id="detail-crumb">DETAILS</span></span>
+    <span id="detail-index">THE EVERYDAY EDIT</span>
+  </div>
+  <div class="product-detail-layout">
+    <div class="detail-gallery">
+      <div class="detail-image-stage"><img id="detail-image" src="" alt="" decoding="async"></div>
+      <div class="detail-image-caption"><span>AURUM CLOTHING</span><span>Considered essentials · Everyday layers</span></div>
+    </div>
+    <div class="detail-content">
+      <div class="detail-overline" id="detail-category"></div>
+      <h1 id="detail-name"></h1>
+      <div class="detail-price" id="detail-price"></div>
+      <p class="detail-description" id="detail-description"></p>
+      <div class="detail-meta-grid">
+        <div><span>Colour</span><strong id="detail-colour"></strong></div>
+        <div><span>Silhouette</span><strong id="detail-fit"></strong></div>
+      </div>
+      <div class="detail-size-head"><span>Select your size</span><span>Size availability not connected</span></div>
+      <div class="detail-sizes" id="detail-sizes"></div>
+      <div class="detail-stock"><span class="detail-stock-dot"></span><span>Currently listed as out of stock</span></div>
+      <button class="detail-unavailable" type="button" disabled>Currently unavailable</button>
+      <p class="detail-note">This is a catalogue storefront preview. Live stock, checkout and order processing have not been connected yet.</p>
+      <div class="detail-accordion">
+        <details open><summary>Product details</summary><p id="detail-product-notes"></p></details>
+        <details><summary>Size & fit</summary><p id="detail-fit-notes"></p></details>
+        <details><summary>Delivery & returns</summary><p>Delivery timelines, shipping charges and return terms have not yet been configured for this demo storefront. Please confirm these details with the store before placing an order.</p></details>
+      </div>
+      <div class="detail-related"><h2>Keep exploring</h2><div class="related-grid" id="related-grid"></div></div>
+    </div>
+  </div>
+</section>
+
 <script>
 const products=[{"id":"grey-hoodie","category":"Hoodie","name":"Grey Hoodie","price":2299,"image":"assets/products/grey-hoodie.webp","alt":"Heather grey pullover hoodie","tag":"Everyday layer","color":"Heather grey","fit":"Relaxed fit","sizes":["S","M","L","XL","XXL"],"description":"A clean heather-grey pullover with a roomy hood and classic front pouch pocket. An easy layer for relaxed everyday styling."},{"id":"classic-box-tee","category":"T-shirt","name":"Classic Box Tee","price":999,"image":"assets/products/classic-box-tee.webp","alt":"Classic white box-fit T-shirt","tag":"Everyday basic","color":"Optic white","fit":"Boxy relaxed fit","sizes":["S","M","L","XL","XXL"],"description":"A clean white tee with a simple crew neckline and an easy boxy silhouette. A dependable base layer for every rotation."},{"id":"classic-box-tee-black","category":"T-shirt","name":"Classic Box Tee Black","price":1099,"image":"assets/products/classic-box-tee-black.webp","alt":"Classic black T-shirt","tag":"Custom design","color":"Black","fit":"Boxy relaxed fit","sizes":["S","M","L","XL","XXL"],"description":"A black box-fit tee designed as a canvas for graphics, lettering, or artwork. Keep it minimal or make it personal."},{"id":"zip-through-hoodie","category":"Hoodie","name":"Zip-through Hoodie","price":2699,"image":"assets/products/zip-through-hoodie.webp","alt":"Black zip-through hoodie","tag":"Easy layering","color":"Black","fit":"Regular fit","sizes":["S","M","L","XL","XXL"],"description":"An easy black layer with a full front zip, adjustable hood, and relaxed shape. Made for throwing on over your favourite tee."},{"id":"utility-overshirt","category":"Overshirt","name":"Utility Overshirt","price":2299,"image":"assets/aurum-utility-overshirt.webp","alt":"Olive utility overshirt","tag":"Versatile layer","color":"Olive khaki","fit":"Easy layering fit","sizes":["S","M","L","XL"],"description":"A utility-inspired layer with a structured look and an easy fit. Wear open over a tee or buttoned for a more defined silhouette."},{"id":"black-graphic-hoodie","category":"Hoodie","name":"Black Graphic Hoodie","price":2399,"image":"assets/products/black-graphic-hoodie.webp","alt":"Minimal black pullover hoodie","tag":"Everyday essential","color":"Black","fit":"Relaxed streetwear fit","sizes":["S","M","L","XL","XXL"],"description":"A versatile black pullover with a clean, minimal finish. An everyday layer for denim, cargos, and relaxed joggers."},{"id":"black-lace-up-crop-top","category":"Women’s Tops","name":"Black Lace-Up Crop Top","price":1299,"image":"assets/products/black-lace-up-crop-top.webp","alt":"Black fitted lace-up crop top","tag":"Statement top","color":"Black","fit":"Fitted cropped silhouette","sizes":["XS","S","M","L","XL"],"description":"A bold fitted silhouette to pair with baggy denim or high-waisted trousers for a balanced look."},{"id":"dusty-rose-off-shoulder-top","category":"Women’s Tops","name":"Dusty Rose Off-Shoulder Top","price":1399,"image":"assets/products/dusty-rose-off-shoulder-top.webp","alt":"Dusty rose off-shoulder top","tag":"Soft statement","color":"Dusty rose","fit":"Close-fitting silhouette","sizes":["XS","S","M","L"],"description":"A soft statement piece with a close-fitting shape. Pair it with black or neutral bottoms for an easy contrast."},{"id":"black-baggy-cargo-jeans","category":"Jeans","name":"Black Baggy Cargo Jeans","price":2499,"image":"assets/products/black-baggy-cargo-jeans.webp","alt":"Washed black baggy cargo jeans","tag":"Relaxed streetwear","color":"Washed black","fit":"Loose baggy fit","sizes":["28","30","32","34","36"],"description":"A relaxed denim shape with streetwear attitude. Works with fitted tops, box tees, and oversized hoodies."},{"id":"beige-baggy-linen-pants","category":"Trousers","name":"Beige Baggy Linen Pants","price":2199,"image":"assets/products/beige-baggy-linen-pants.webp","alt":"Beige baggy linen trousers","tag":"Relaxed comfort","color":"Natural beige","fit":"Baggy relaxed fit","sizes":["S","M","L","XL","XXL"],"description":"Light neutral trousers with an easy relaxed leg. A natural match for black tops, white tees, and muted layers."}]; let category='All';let chosenSize='';const grid=document.getElementById('product-grid');const rupees=n=>'₹'+n.toLocaleString('en-IN');
-function showPage(which){document.getElementById('dashboard').classList.toggle('active',which==='dashboard');document.getElementById('store').classList.toggle('active',which==='store');window.scrollTo({top:0,behavior:'smooth'});if(which==='store')document.getElementById('search').focus({preventScroll:true});}
-document.querySelectorAll('[data-open-store]').forEach(el=>el.addEventListener('click',()=>showPage('store')));document.getElementById('store-button').addEventListener('click',()=>showPage('store'));document.getElementById('home-button').addEventListener('click',()=>showPage('dashboard'));document.getElementById('brand-home').addEventListener('click',e=>{e.preventDefault();showPage('dashboard')});document.getElementById('back-home').addEventListener('click',()=>showPage('dashboard'));
-function render(){let a=products.filter(p=>(category==='All'||p.category===category)&&(`${p.name} ${p.category} ${p.tag}`.toLowerCase().includes(document.getElementById('search').value.toLowerCase())));const sort=document.getElementById('sort').value;if(sort==='price-asc')a.sort((x,y)=>x.price-y.price);if(sort==='price-desc')a.sort((x,y)=>y.price-x.price);if(sort==='name')a.sort((x,y)=>x.name.localeCompare(y.name));document.getElementById('result-count').textContent=`${a.length} ${a.length===1?'piece':'pieces'}`;grid.innerHTML=a.length?a.map(p=>`<article class="product-card" data-id="${p.id}" tabindex="0" role="button" aria-label="View ${p.name}"><div class="product-image"><img src="${p.image}" alt="${p.alt}" loading="lazy" decoding="async"><span class="product-tag">${p.tag}</span><span class="sold-label">Out of stock</span></div><div class="product-copy"><div><h3>${p.name}</h3><div class="product-meta">${p.color} · ${p.fit}</div></div><div class="price">${rupees(p.price)}</div></div><span class="product-cta">View details ↗</span></article>`).join(''):'<div class="empty">No pieces found. Try another search.</div>';grid.querySelectorAll('.product-card').forEach(card=>{card.addEventListener('click',()=>openProduct(card.dataset.id));card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openProduct(card.dataset.id)}})});}
+function showPage(which,updateUrl=true){document.getElementById('dashboard').classList.toggle('active',which==='dashboard');document.getElementById('store').classList.toggle('active',which==='store');document.getElementById('product-page').classList.remove('active');window.scrollTo({top:0,behavior:'smooth'});if(which==='store')document.getElementById('search').focus({preventScroll:true});if(updateUrl){const hash=which==='store'?'#store':'#home';if(location.hash!==hash)history.pushState({page:which},'',hash)}}document.querySelectorAll('[data-open-store]').forEach(el=>el.addEventListener('click',()=>showPage('store')));document.getElementById('store-button').addEventListener('click',()=>showPage('store'));document.getElementById('home-button').addEventListener('click',()=>showPage('dashboard'));document.getElementById('brand-home').addEventListener('click',e=>{e.preventDefault();showPage('dashboard')});document.getElementById('back-home').addEventListener('click',()=>showPage('dashboard'));
+function render(){let a=products.filter(p=>(category==='All'||p.category===category)&&(`${p.name} ${p.category} ${p.tag}`.toLowerCase().includes(document.getElementById('search').value.toLowerCase())));const sort=document.getElementById('sort').value;if(sort==='price-asc')a.sort((x,y)=>x.price-y.price);if(sort==='price-desc')a.sort((x,y)=>y.price-x.price);if(sort==='name')a.sort((x,y)=>x.name.localeCompare(y.name));document.getElementById('result-count').textContent=`${a.length} ${a.length===1?'piece':'pieces'}`;grid.innerHTML=a.length?a.map(p=>`<article class="product-card" data-id="${p.id}" tabindex="0" role="button" aria-label="View ${p.name}"><div class="product-image"><img src="${p.image}" alt="${p.alt}" loading="lazy" decoding="async"><span class="product-tag">${p.tag}</span><span class="sold-label">Out of stock</span></div><div class="product-copy"><div><h3>${p.name}</h3><div class="product-meta">${p.color} · ${p.fit}</div></div><div class="price">${rupees(p.price)}</div></div><span class="product-cta">View product ↗</span></article>`).join(''):'<div class="empty">No pieces found. Try another search.</div>';grid.querySelectorAll('.product-card').forEach(card=>{card.addEventListener('click',()=>openProduct(card.dataset.id));card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openProduct(card.dataset.id)}})});}
 document.getElementById('filters').addEventListener('click',e=>{const b=e.target.closest('[data-category]');if(!b)return;category=b.dataset.category;document.querySelectorAll('.filter').forEach(x=>x.classList.toggle('active',x===b));render()});document.getElementById('search').addEventListener('input',render);document.getElementById('sort').addEventListener('change',render);
-function openProduct(id){const p=products.find(x=>x.id===id);if(!p)return;chosenSize='';document.getElementById('modal-image').src=p.image;document.getElementById('modal-image').alt=p.alt;document.getElementById('modal-tag').textContent=p.tag+' · '+p.category;document.getElementById('modal-name').textContent=p.name;document.getElementById('modal-price').textContent=rupees(p.price);document.getElementById('modal-description').textContent=p.description;document.getElementById('modal-sizes').innerHTML=p.sizes.map(s=>`<button class="size" data-size="${s}" type="button">${s}</button>`).join('');document.getElementById('modal-sizes').querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{chosenSize=b.dataset.size;document.querySelectorAll('.size').forEach(s=>s.classList.toggle('selected',s===b))}));document.getElementById('product-modal').classList.add('open');document.body.style.overflow='hidden';document.getElementById('modal-close').focus()}
-function closeModal(){document.getElementById('product-modal').classList.remove('open');document.body.style.overflow=''}document.getElementById('modal-close').addEventListener('click',closeModal);document.getElementById('product-modal').addEventListener('click',e=>{if(e.target.id==='product-modal')closeModal()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});document.getElementById('year').textContent=new Date().getFullYear();render();
+
+function openProduct(id,updateUrl=true){
+ const p=products.find(x=>x.id===id);if(!p)return;
+ document.getElementById('dashboard').classList.remove('active');
+ document.getElementById('store').classList.remove('active');
+ document.getElementById('product-page').classList.add('active');
+ document.getElementById('detail-image').src=p.image;
+ document.getElementById('detail-image').alt=p.alt;
+ document.getElementById('detail-crumb').textContent=p.name;
+ document.getElementById('detail-category').textContent=p.tag+' / '+p.category;
+ document.getElementById('detail-name').textContent=p.name;
+ document.getElementById('detail-price').textContent=rupees(p.price);
+ document.getElementById('detail-description').textContent=p.description;
+ document.getElementById('detail-colour').textContent=p.color;
+ document.getElementById('detail-fit').textContent=p.fit;
+ document.getElementById('detail-sizes').innerHTML=p.sizes.map(s=>'<button class="detail-size" type="button" disabled aria-label="'+s+', currently unavailable">'+s+'</button>').join('');
+ document.getElementById('detail-product-notes').textContent=p.name+' · '+p.category+'. '+p.color+' colourway with a '+p.fit.toLowerCase()+'. '+p.description;
+ document.getElementById('detail-fit-notes').textContent='Listed fit: '+p.fit+'. Available size labels in the catalogue: '+p.sizes.join(', ')+'. Garment measurements and model sizing have not yet been supplied.';
+ const related=products.filter(x=>x.id!==p.id).sort((a,b)=>(a.category===p.category?-1:0)-(b.category===p.category?-1:0)).slice(0,2);
+ document.getElementById('related-grid').innerHTML=related.map(x=>'<article class="related-card" data-related="'+x.id+'" tabindex="0" role="button" aria-label="View '+x.name+'"><img src="'+x.image+'" alt="'+x.alt+'" loading="lazy"><div><strong>'+x.name+'</strong><small>'+rupees(x.price)+'</small></div></article>').join('');
+ document.querySelectorAll('[data-related]').forEach(card=>{card.addEventListener('click',()=>openProduct(card.dataset.related));card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openProduct(card.dataset.related)}})});
+ window.scrollTo({top:0,behavior:'smooth'});
+ if(updateUrl&&location.hash!=='#product/'+id)history.pushState({product:id},'','#product/'+id);
+}
+function closeProductPage(updateUrl=true){if(updateUrl&&location.hash!=='#store')history.pushState({page:'store'},'','#store');showPage('store',false)}
+document.getElementById('product-back').addEventListener('click',()=>closeProductPage());
+window.addEventListener('hashchange',()=>{const match=location.hash.match(/^#product\/([^/]+)$/);if(match)openProduct(decodeURIComponent(match[1]),false);else if(location.hash==='#store')showPage('store',false);else showPage('dashboard',false)});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.getElementById('product-page').classList.contains('active'))closeProductPage()});
+document.getElementById('year').textContent=new Date().getFullYear();render();
+if(location.hash.startsWith('#product/'))openProduct(decodeURIComponent(location.hash.slice(9)),false);else if(location.hash==='#store')showPage('store',false);
 const siteLoader=document.getElementById('site-loader');let siteLoaderHidden=false;function hideSiteLoader(){if(siteLoaderHidden||!siteLoader)return;siteLoaderHidden=true;siteLoader.classList.add('is-hidden');window.setTimeout(()=>siteLoader.remove(),280)}const loaderFailsafe=window.setTimeout(hideSiteLoader,3500);const criticalImages=[document.querySelector('.hero-photo'),document.querySelector('.brand-logo'),document.querySelector('.loader-logo')].filter(Boolean);Promise.all(criticalImages.map(img=>{if(img.complete)return typeof img.decode==='function'?img.decode().catch(()=>{}):Promise.resolve();return new Promise(resolve=>{img.addEventListener('load',resolve,{once:true});img.addEventListener('error',resolve,{once:true})})})).then(()=>{window.clearTimeout(loaderFailsafe);requestAnimationFrame(()=>requestAnimationFrame(hideSiteLoader))});window.addEventListener('load',()=>{window.clearTimeout(loaderFailsafe);hideSiteLoader()},{once:true});
 
 </script>
