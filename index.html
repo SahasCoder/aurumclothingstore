@@ -37,13 +37,88 @@
 .image-lightbox button{position:absolute;right:22px;top:20px;width:44px;height:44px;border:1px solid rgba(255,255,255,.45);background:transparent;color:white;font-size:28px}
 .detail-wish.active svg{fill:#9d5c52;stroke:#9d5c52}
 @media(max-width:700px){.image-lightbox{padding:12px}.image-lightbox img{max-width:96vw;max-height:82vh}.image-lightbox button{right:12px;top:12px}}
+
+/* AURUM responsive polish — desktop refinement + mobile-first navigation */
+.topbar{box-shadow:0 8px 28px rgba(25,26,23,.035);transition:box-shadow .3s ease}
+.nav-row>*{transition:color .22s ease,transform .22s ease,background .22s ease}
+.nav-row a:active,.nav-row button:active{transform:scale(.96)}
+.icon-action{transition:background .22s ease,transform .22s ease}
+.icon-action:hover{background:rgba(115,119,90,.09);transform:translateY(-2px)}
+.product-card{transition:transform .35s cubic-bezier(.2,.75,.25,1)}
+.product-card:hover{transform:translateY(-5px)}
+.product-image{background:linear-gradient(145deg,#f0efe9 0%,#e8e6de 100%)}
+.product-image img{transition:transform .7s cubic-bezier(.2,.75,.25,1),filter .5s ease}
+.product-card:hover .product-image img{transform:scale(1.065);filter:saturate(1.04)}
+.btn:active,.toolbar-btn:active,.quick-add:active{transform:scale(.97)}
+@keyframes navPop{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+@media(min-width:701px){.nav-row>*{animation:navPop .45s both}.nav-row>*:nth-child(2){animation-delay:.035s}.nav-row>*:nth-child(3){animation-delay:.07s}.nav-row>*:nth-child(4){animation-delay:.105s}.nav-row>*:nth-child(5){animation-delay:.14s}.nav-row>*:nth-child(6){animation-delay:.175s}.nav-row>*:nth-child(7){animation-delay:.21s}.nav-row>*:nth-child(8){animation-delay:.245s}}
+@media(max-width:700px){
+  html{scroll-padding-top:190px;-webkit-tap-highlight-color:transparent}
+  .topbar{box-shadow:0 5px 22px rgba(25,26,23,.07)}
+  .header-main{height:58px;padding:0 13px}
+  .brand{gap:8px}
+  .brand img{width:30px;height:30px}
+  .brand strong{font-size:12px;letter-spacing:.2em}
+  .header-actions{gap:3px}
+  .icon-action{width:40px;min-width:40px;height:40px;border-radius:50%}
+  /* Replace the sideways-scrolling category strip with a complete, tappable menu. */
+  .nav-row{height:auto;min-height:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:stretch;justify-content:initial;gap:6px;padding:9px 12px 10px;overflow:visible;overscroll-behavior:initial;border-top:1px solid rgba(25,26,23,.07);}
+  .nav-row a,.nav-row button{min-width:0;min-height:34px;display:flex;align-items:center;justify-content:center;text-align:center;white-space:normal;line-height:1.2;padding:7px 4px;border:1px solid #e2e1d9;border-radius:3px;background:rgba(255,255,255,.56);font-size:7px;letter-spacing:.09em;color:#45473f;}
+  .nav-row a:after,.nav-row button:after{display:none}
+  .nav-row a:active,.nav-row button:active{background:var(--olive);border-color:var(--olive);color:#fff}
+  .nav-row .nav-sale{color:#98654d;border-color:#e5d9ce;background:#fbf7f1}
+  .mobile-search{padding:8px 12px 10px;background:rgba(246,245,240,.98);border-bottom:1px solid var(--line)}
+  .mobile-search .search-box{height:42px;border-radius:3px;overflow:hidden}
+  .mobile-search .search-box input{font-size:12px;padding-left:13px}
+  .mobile-search .search-box button{width:46px}
+  .hero-shell{padding:8px 8px 0}
+  .hero{height:clamp(490px,76svh,680px);min-height:490px}
+  .hero-copy{bottom:48px;left:22px;right:18px}
+  .hero h1{font-size:clamp(56px,13.5vw,82px)}
+  .hero-actions .btn{min-width:132px}
+  .section{padding:48px 15px}
+  .section-head{margin-bottom:18px}
+  .section h2{font-size:clamp(34px,9vw,42px)}
+  .category-card,.category-card:first-child{border-radius:2px;overflow:hidden}
+  .product-grid{padding:12px 10px 88px;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 9px}
+  .product-card{min-width:0}
+  .product-image{aspect-ratio:4/5;border-radius:2px}
+  .product-image img{padding:4px}
+  .product-badge{top:7px;left:7px;font-size:6px;padding:6px 7px}
+  .wishlist-btn{width:34px;height:34px;top:7px;right:7px}
+  /* Quick add must be visible on touch screens; hover-only controls are inaccessible on phones. */
+  .quick-add{display:flex;align-items:center;justify-content:center;opacity:1;transform:none;left:7px;right:7px;bottom:7px;height:36px;background:rgba(255,255,255,.96);font-size:7px;letter-spacing:.1em;border:1px solid rgba(25,26,23,.08)}
+  .product-info{padding:9px 2px 0}
+  .product-info-top{gap:5px}
+  .product-info h3{font-size:9px;line-height:1.45}
+  .product-price{font-size:9px}
+  .product-sub{font-size:7px;line-height:1.45}
+  .swatch{width:13px;height:13px}
+  .collection-toolbar{top:190px}
+  .toolbar-btn{min-height:38px}
+  .mobile-bottom{height:calc(62px + env(safe-area-inset-bottom));padding-bottom:env(safe-area-inset-bottom);}
+  .mobile-bottom button{font-size:7px;gap:5px;min-height:44px}
+  .mobile-bottom svg{width:19px;height:19px}
+  .toast{bottom:calc(76px + env(safe-area-inset-bottom))}
+  .footer{padding-bottom:calc(100px + env(safe-area-inset-bottom))}
+}
+@media(max-width:380px){
+  .nav-row{gap:5px;padding-left:9px;padding-right:9px}
+  .nav-row a,.nav-row button{font-size:6.5px;letter-spacing:.06em;min-height:32px}
+  .header-main{padding:0 9px}
+  .icon-action{width:36px;min-width:36px}
+  .product-grid{padding-left:8px;padding-right:8px;gap:19px 7px}
+  .product-info h3,.product-price{font-size:8px}
+}
+@media(hover:none){.product-card:hover{transform:none}.product-card:hover .product-image img{transform:none}}
+
 </style></head><body>
 <div class="announcement"><b>THE AURUM EDIT</b><span>Considered essentials · Everyday layers · Made to move</span></div>
 <header class="topbar"><div class="header-main">
 <a class="brand" href="#home" aria-label="AURUM Clothing home"><img src="assets/aurum-emblem.webp" alt=""><strong>AURUM</strong></a>
 <div class="search-wrap"><div class="search-box"><input id="search-desktop" type="search" placeholder="Search for your next favourite..." autocomplete="off" aria-label="Search products"><button id="search-submit" aria-label="Search">⌕</button></div><div class="search-suggestions" id="suggestions-desktop"></div></div>
 <div class="header-actions"><button class="icon-action" id="wishlist-open" aria-label="Open wishlist"><svg viewBox="0 0 24 24"><path d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7a4.5 4.5 0 0 1 8.8-1.2 4.5 4.5 0 0 1 8.8 1.2Z"/></svg><span class="action-label">Saved</span><i class="count" id="wish-count">0</i></button><button class="icon-action" id="cart-open" aria-label="Open shopping bag"><svg viewBox="0 0 24 24"><path d="M4 8h16l-1.2 12H5.2L4 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg><span class="action-label">Bag</span><i class="count" id="cart-count">0</i></button></div>
-</div><nav class="nav-row" aria-label="Main navigation"><a href="#home">Home</a><a href="#store">Shop all</a><button data-nav-category="Hoodie">Hoodies</button><button data-nav-category="T-shirt">T-shirts</button><button data-nav-category="Jeans">Denim</button><button data-nav-category="Women’s Tops">Women</button><button data-nav-category="Overshirt">New layers</button><button class="nav-sale" id="nav-saved">Wishlist ♡</button></nav>
+</div><nav class="nav-row" aria-label="Shop categories and main navigation"><a href="#home">Home</a><a href="#store">Shop all</a><button data-nav-category="Hoodie">Hoodies</button><button data-nav-category="T-shirt">T-shirts</button><button data-nav-category="Jeans">Denim</button><button data-nav-category="Women’s Tops">Women</button><button data-nav-category="Overshirt">New layers</button><button class="nav-sale" id="nav-saved">Wishlist ♡</button></nav>
 <div class="mobile-search"><div class="search-wrap"><div class="search-box"><input id="search-mobile" type="search" placeholder="Search AURUM..." autocomplete="off" aria-label="Search products"><button id="search-mobile-submit" aria-label="Search">⌕</button></div><div class="search-suggestions" id="suggestions-mobile"></div></div></div></header>
 <main>
 <section id="home-page" class="page active"><div class="hero-shell"><section class="hero"><img class="hero-bg" src="assets/hero-campaign.webp" alt="Fashion editorial campaign" fetchpriority="high"><div class="hero-copy"><div class="eyebrow">The new everyday uniform</div><h1>Style is<br><em>your own.</em></h1><p>Discover easy layers, confident silhouettes and everyday pieces made to move with you. A wardrobe that feels like you.</p><div class="hero-actions"><button class="btn light" data-go-store>Explore the collection <span>↗</span></button><span class="hero-note">AURUM · EST. IN EVERYDAY</span></div></div><div class="hero-index"><b>01</b> / THE EVERYDAY EDIT</div></section></div>
